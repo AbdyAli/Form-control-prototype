@@ -10,6 +10,8 @@ from picamera2 import Picamera2
 
 # Suppress TensorFlow logs
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
+# Runs TensorFlow on CPU to avoid compatibility issues
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 # Finger data
@@ -27,6 +29,7 @@ root = tk.Tk()
 root.title("Form Control")
 root.attributes('-fullscreen', True)
 root.configure(bg="black")
+
 # Create Frames
 main_frame = tk.Frame(root, bg="black")
 settings_frame = tk.Frame(root, bg="black")
